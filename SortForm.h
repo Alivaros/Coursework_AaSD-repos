@@ -74,11 +74,15 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::Button^ buttonClear;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberSource;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementSource;
-	private: System::Windows::Forms::DataGridView^ dataGridViewOrdered;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberOrdered;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementOrdered;
+	private: System::Windows::Forms::DataGridView^ dataGridViewSorted;
+
+
+
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberSorted;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementSorted;
 
 
 
@@ -131,11 +135,12 @@ namespace CourseworkAaSDrepos {
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
 			this->buttonSort = (gcnew System::Windows::Forms::Button());
 			this->buttonClear = (gcnew System::Windows::Forms::Button());
-			this->dataGridViewOrdered = (gcnew System::Windows::Forms::DataGridView());
-			this->NumberOrdered = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->ElementOrdered = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewSorted = (gcnew System::Windows::Forms::DataGridView());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->NumberSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ElementSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -143,19 +148,20 @@ namespace CourseworkAaSDrepos {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSource))->BeginInit();
 			this->groupBox3->SuspendLayout();
 			this->groupBox4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewOrdered))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSorted))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// buttonExit
 			// 
 			this->buttonExit->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->buttonExit->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonExit->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonExit->Location = System::Drawing::Point(294, 14);
+			this->buttonExit->Location = System::Drawing::Point(268, 14);
 			this->buttonExit->Name = L"buttonExit";
-			this->buttonExit->Size = System::Drawing::Size(126, 43);
+			this->buttonExit->Size = System::Drawing::Size(180, 48);
 			this->buttonExit->TabIndex = 0;
-			this->buttonExit->Text = L"Выход";
+			this->buttonExit->Text = L"Вернуться в главное меню";
 			this->buttonExit->UseVisualStyleBackColor = true;
 			this->buttonExit->Click += gcnew System::EventHandler(this, &SortForm::buttonExit_Click);
 			// 
@@ -495,9 +501,9 @@ namespace CourseworkAaSDrepos {
 			this->groupBox4->Controls->Add(this->buttonSort);
 			this->groupBox4->Controls->Add(this->buttonClear);
 			this->groupBox4->Controls->Add(this->buttonExit);
-			this->groupBox4->Location = System::Drawing::Point(319, 494);
+			this->groupBox4->Location = System::Drawing::Point(319, 489);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(460, 63);
+			this->groupBox4->Size = System::Drawing::Size(460, 68);
 			this->groupBox4->TabIndex = 9;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Панель управления";
@@ -507,9 +513,9 @@ namespace CourseworkAaSDrepos {
 			this->buttonSort->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->buttonSort->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonSort->Location = System::Drawing::Point(36, 14);
+			this->buttonSort->Location = System::Drawing::Point(10, 14);
 			this->buttonSort->Name = L"buttonSort";
-			this->buttonSort->Size = System::Drawing::Size(120, 43);
+			this->buttonSort->Size = System::Drawing::Size(120, 48);
 			this->buttonSort->TabIndex = 2;
 			this->buttonSort->Text = L"Сортировка";
 			this->buttonSort->UseVisualStyleBackColor = true;
@@ -520,48 +526,34 @@ namespace CourseworkAaSDrepos {
 			this->buttonClear->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->buttonClear->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonClear->Location = System::Drawing::Point(162, 14);
+			this->buttonClear->Location = System::Drawing::Point(136, 14);
 			this->buttonClear->Name = L"buttonClear";
-			this->buttonClear->Size = System::Drawing::Size(126, 43);
+			this->buttonClear->Size = System::Drawing::Size(126, 48);
 			this->buttonClear->TabIndex = 1;
 			this->buttonClear->Text = L"Очистка";
 			this->buttonClear->UseVisualStyleBackColor = true;
 			this->buttonClear->Click += gcnew System::EventHandler(this, &SortForm::buttonClear_Click);
 			// 
-			// dataGridViewOrdered
+			// dataGridViewSorted
 			// 
-			this->dataGridViewOrdered->AllowUserToAddRows = false;
-			this->dataGridViewOrdered->AllowUserToDeleteRows = false;
-			this->dataGridViewOrdered->AllowUserToResizeColumns = false;
-			this->dataGridViewOrdered->AllowUserToResizeRows = false;
-			this->dataGridViewOrdered->BackgroundColor = System::Drawing::SystemColors::Control;
-			this->dataGridViewOrdered->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridViewOrdered->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
-				this->NumberOrdered,
-					this->ElementOrdered
+			this->dataGridViewSorted->AllowUserToAddRows = false;
+			this->dataGridViewSorted->AllowUserToDeleteRows = false;
+			this->dataGridViewSorted->AllowUserToResizeColumns = false;
+			this->dataGridViewSorted->AllowUserToResizeRows = false;
+			this->dataGridViewSorted->BackgroundColor = System::Drawing::SystemColors::Control;
+			this->dataGridViewSorted->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridViewSorted->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
+				this->NumberSorted,
+					this->ElementSorted
 			});
-			this->dataGridViewOrdered->Location = System::Drawing::Point(551, 58);
-			this->dataGridViewOrdered->Name = L"dataGridViewOrdered";
-			this->dataGridViewOrdered->ReadOnly = true;
-			this->dataGridViewOrdered->RowHeadersVisible = false;
-			this->dataGridViewOrdered->RowTemplate->Height = 30;
-			this->dataGridViewOrdered->Size = System::Drawing::Size(228, 309);
-			this->dataGridViewOrdered->TabIndex = 10;
-			this->dataGridViewOrdered->TabStop = false;
-			// 
-			// NumberOrdered
-			// 
-			this->NumberOrdered->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->NumberOrdered->HeaderText = L"Номер";
-			this->NumberOrdered->Name = L"NumberOrdered";
-			this->NumberOrdered->ReadOnly = true;
-			// 
-			// ElementOrdered
-			// 
-			this->ElementOrdered->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->ElementOrdered->HeaderText = L"Элемент";
-			this->ElementOrdered->Name = L"ElementOrdered";
-			this->ElementOrdered->ReadOnly = true;
+			this->dataGridViewSorted->Location = System::Drawing::Point(551, 58);
+			this->dataGridViewSorted->Name = L"dataGridViewSorted";
+			this->dataGridViewSorted->ReadOnly = true;
+			this->dataGridViewSorted->RowHeadersVisible = false;
+			this->dataGridViewSorted->RowTemplate->Height = 30;
+			this->dataGridViewSorted->Size = System::Drawing::Size(228, 309);
+			this->dataGridViewSorted->TabIndex = 10;
+			this->dataGridViewSorted->TabStop = false;
 			// 
 			// label9
 			// 
@@ -587,6 +579,29 @@ namespace CourseworkAaSDrepos {
 			this->label10->TabIndex = 12;
 			this->label10->Text = L"Упорядоченный массив";
 			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->BackColor = System::Drawing::SystemColors::Control;
+			this->pictureBox3->Location = System::Drawing::Point(319, 31);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(460, 336);
+			this->pictureBox3->TabIndex = 13;
+			this->pictureBox3->TabStop = false;
+			// 
+			// NumberSorted
+			// 
+			this->NumberSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->NumberSorted->HeaderText = L"Номер";
+			this->NumberSorted->Name = L"NumberSorted";
+			this->NumberSorted->ReadOnly = true;
+			// 
+			// ElementSorted
+			// 
+			this->ElementSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->ElementSorted->HeaderText = L"Элемент";
+			this->ElementSorted->Name = L"ElementSorted";
+			this->ElementSorted->ReadOnly = true;
+			// 
 			// SortForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -596,13 +611,14 @@ namespace CourseworkAaSDrepos {
 			this->ControlBox = false;
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
-			this->Controls->Add(this->dataGridViewOrdered);
+			this->Controls->Add(this->dataGridViewSorted);
 			this->Controls->Add(this->dataGridViewSource);
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
+			this->Controls->Add(this->pictureBox3);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
@@ -622,12 +638,15 @@ namespace CourseworkAaSDrepos {
 			this->groupBox3->ResumeLayout(false);
 			this->groupBox3->PerformLayout();
 			this->groupBox4->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewOrdered))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSorted))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+	int c = 0;
+	int m = 0;
 
 	System::Void checkfields()
 	{
@@ -673,10 +692,6 @@ namespace CourseworkAaSDrepos {
 
 	}
 
-
-
-
-
 	double get_Bradford(double A, double B, double C) {
 		int r = rand();
 		double u = (double)r / ((double)RAND_MAX + 1);
@@ -694,7 +709,7 @@ namespace CourseworkAaSDrepos {
 		}
 	}
 
-	void fillDataGridView(DataGridView^ dataGridView, double N, double* Massiv, String^ numberColumnName, String^ elementColumnName)
+	void fillDataGridView(DataGridView^ dataGridView, int N, double* Massiv, String^ numberColumnName, String^ elementColumnName)
 	{
 		dataGridView->Rows->Clear();
 		for (int i = 0; i < N; i++)
@@ -706,6 +721,8 @@ namespace CourseworkAaSDrepos {
 	}
 
 
+
+
 private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	this->DialogResult = System::Windows::Forms::DialogResult::OK;
@@ -714,8 +731,11 @@ private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs
 
 private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs^ e) 
 {
+	int c = 0;
+	int m = 0;
+	int unsigned t1, t2, t;
 	this->dataGridViewSource->Rows->Clear();
-	this->dataGridViewOrdered->Rows->Clear();
+	this->dataGridViewSorted->Rows->Clear();
 	int N = Convert::ToInt32(this->textBoxN->Text);
 	double A = Convert::ToDouble(this->textBoxA->Text);
 	double B = Convert::ToDouble(this->textBoxB->Text);
@@ -723,6 +743,13 @@ private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs
 	double* Massiv = new double[N];
 	get_rand(N, A, B, C, Massiv);
 	fillDataGridView(this->dataGridViewSource, N, Massiv, "NumberSource", "ElementSource");
+	/*TimSort(Massiv, N);*/
+	fillDataGridView(this->dataGridViewSorted, N, Massiv, "NumberSorted", "ElementSorted");
+	textBoxTime->Text = t.ToString();
+
+	
+	
+	
 }
 private: System::Void buttonClear_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -735,7 +762,7 @@ private: System::Void buttonClear_Click(System::Object^ sender, System::EventArg
 	textBoxPermutation->Clear();
 
 	this->dataGridViewSource->Rows->Clear();
-	this->dataGridViewOrdered->Rows->Clear();
+	this->dataGridViewSorted->Rows->Clear();
 }
 private: System::Void textBoxN_TextChanged(System::Object^ sender, System::EventArgs^ e) 
 {

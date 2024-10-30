@@ -65,11 +65,13 @@ namespace CourseworkAaSDrepos {
 			// 
 			// buttonExit
 			// 
-			this->buttonExit->Location = System::Drawing::Point(697, 526);
+			this->buttonExit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->buttonExit->Location = System::Drawing::Point(711, 508);
 			this->buttonExit->Name = L"buttonExit";
-			this->buttonExit->Size = System::Drawing::Size(75, 23);
+			this->buttonExit->Size = System::Drawing::Size(61, 41);
 			this->buttonExit->TabIndex = 0;
-			this->buttonExit->Text = L"button1";
+			this->buttonExit->Text = L"ÎÊ";
 			this->buttonExit->UseVisualStyleBackColor = true;
 			this->buttonExit->Click += gcnew System::EventHandler(this, &InfoForm::buttonExit_Click);
 			// 
@@ -91,7 +93,7 @@ namespace CourseworkAaSDrepos {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(30, 86);
+			this->label2->Location = System::Drawing::Point(30, 81);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(608, 24);
 			this->label2->TabIndex = 2;
@@ -113,12 +115,12 @@ namespace CourseworkAaSDrepos {
 			this->linkLabel1->AutoSize = true;
 			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->linkLabel1->Location = System::Drawing::Point(211, 526);
+			this->linkLabel1->Location = System::Drawing::Point(202, 526);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(86, 21);
+			this->linkLabel1->Size = System::Drawing::Size(412, 21);
 			this->linkLabel1->TabIndex = 4;
 			this->linkLabel1->TabStop = true;
-			this->linkLabel1->Text = L"linkLabel1";
+			this->linkLabel1->Text = L"https://github.com/Alivaros/Coursework_AaSD-repos";
 			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &InfoForm::linkLabel1_LinkClicked);
 			// 
 			// InfoForm
@@ -150,7 +152,9 @@ namespace CourseworkAaSDrepos {
 		this->DialogResult = System::Windows::Forms::DialogResult::OK;
 		this->Close();
 	}
-	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
+	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) 
+	{
+		System::Diagnostics::Process::Start("https://github.com/Alivaros/Coursework_AaSD-repos");
 	}
 };
 }

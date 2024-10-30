@@ -88,9 +88,9 @@ namespace CourseworkAaSDrepos {
 				static_cast<System::Byte>(204)));
 			this->buttonExit->Location = System::Drawing::Point(12, 674);
 			this->buttonExit->Name = L"buttonExit";
-			this->buttonExit->Size = System::Drawing::Size(126, 43);
+			this->buttonExit->Size = System::Drawing::Size(262, 43);
 			this->buttonExit->TabIndex = 1;
-			this->buttonExit->Text = L"Выход";
+			this->buttonExit->Text = L"Вернуться к уравнению связи";
 			this->buttonExit->UseVisualStyleBackColor = true;
 			this->buttonExit->Click += gcnew System::EventHandler(this, &MHKForm::buttonExit_Click);
 			// 
@@ -226,7 +226,9 @@ namespace CourseworkAaSDrepos {
 		this->DialogResult = System::Windows::Forms::DialogResult::OK;
 		this->Close();
 	}
-	private: System::Void MHKForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void MHKForm_Load(System::Object^ sender, System::EventArgs^ e) 
+	{
+
 	}
 };
 }
