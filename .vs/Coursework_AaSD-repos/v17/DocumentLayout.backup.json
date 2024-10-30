@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:MHKForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\EqForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:EqForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\SortForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:SortForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:MHKForm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MainForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:MainForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MainForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:MainForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\EqForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:EqForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB7DCDB6-9577-4234-B4C5-97E296474C0C}|Coursework_AaSD-repos.vcxproj|solutionrelative:MHKForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MHKForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.h",
+              "RelativeDocumentMoniker": "MHKForm.h",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "MHKForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-30T05:09:20.326Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MHKForm.h",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.h",
+              "RelativeDocumentMoniker": "MHKForm.h",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.h",
+              "RelativeToolTip": "MHKForm.h",
+              "ViewState": "AgIAAD4AAAAAAAAAAADgv+QAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-30T02:51:18.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MHKForm.cpp",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.cpp",
+              "RelativeDocumentMoniker": "MHKForm.cpp",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MHKForm.cpp",
+              "RelativeToolTip": "MHKForm.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-30T02:49:12.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SortForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\SortForm.h",
+              "RelativeDocumentMoniker": "SortForm.h",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\SortForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SortForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-29T13:50:53.466Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EqForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\EqForm.h",
+              "RelativeDocumentMoniker": "EqForm.h",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\EqForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "EqForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-29T13:40:52.306Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EqForm.h",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\EqForm.h",
+              "RelativeDocumentMoniker": "EqForm.h",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\EqForm.h",
+              "RelativeToolTip": "EqForm.h",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAJgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-29T13:48:03.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainForm.h",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MainForm.h",
+              "RelativeDocumentMoniker": "MainForm.h",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MainForm.h",
+              "RelativeToolTip": "MainForm.h",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAAADEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-29T13:26:46.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MainForm.h",
+              "RelativeDocumentMoniker": "MainForm.h",
+              "ToolTip": "C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\MainForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "MainForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-29T05:09:49.365Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
