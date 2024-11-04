@@ -1,7 +1,7 @@
 #pragma once
 #include "math.h"
 #include <stdlib.h>
-#include <ctime>
+#include <chrono>
 #include <algorithm>
 
 
@@ -136,11 +136,11 @@ namespace CourseworkAaSDrepos {
 			this->buttonSort = (gcnew System::Windows::Forms::Button());
 			this->buttonClear = (gcnew System::Windows::Forms::Button());
 			this->dataGridViewSorted = (gcnew System::Windows::Forms::DataGridView());
+			this->NumberSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ElementSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->NumberSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->ElementSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -555,6 +555,20 @@ namespace CourseworkAaSDrepos {
 			this->dataGridViewSorted->TabIndex = 10;
 			this->dataGridViewSorted->TabStop = false;
 			// 
+			// NumberSorted
+			// 
+			this->NumberSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->NumberSorted->HeaderText = L"Номер";
+			this->NumberSorted->Name = L"NumberSorted";
+			this->NumberSorted->ReadOnly = true;
+			// 
+			// ElementSorted
+			// 
+			this->ElementSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->ElementSorted->HeaderText = L"Элемент";
+			this->ElementSorted->Name = L"ElementSorted";
+			this->ElementSorted->ReadOnly = true;
+			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
@@ -587,20 +601,6 @@ namespace CourseworkAaSDrepos {
 			this->pictureBox3->Size = System::Drawing::Size(460, 336);
 			this->pictureBox3->TabIndex = 13;
 			this->pictureBox3->TabStop = false;
-			// 
-			// NumberSorted
-			// 
-			this->NumberSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->NumberSorted->HeaderText = L"Номер";
-			this->NumberSorted->Name = L"NumberSorted";
-			this->NumberSorted->ReadOnly = true;
-			// 
-			// ElementSorted
-			// 
-			this->ElementSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->ElementSorted->HeaderText = L"Элемент";
-			this->ElementSorted->Name = L"ElementSorted";
-			this->ElementSorted->ReadOnly = true;
 			// 
 			// SortForm
 			// 
@@ -645,9 +645,7 @@ namespace CourseworkAaSDrepos {
 
 		}
 #pragma endregion
-	int c = 0;
-	int m = 0;
-
+	const int RUN = 64;
 	System::Void checkfields()
 	{
 		Regex^ regex = gcnew Regex("^-?[0-9]*\\,?[0-9]*$");
@@ -678,7 +676,10 @@ namespace CourseworkAaSDrepos {
 
 			this->textBoxA->Text != "0" &&
 			this->textBoxB->Text != "0," &&
-			this->textBoxC->Text != "0,";
+			this->textBoxC->Text != "0," &&
+
+			this->textBoxC->Text != "-";
+
 		this->buttonClear->Enabled =
 			regex->IsMatch(this->textBoxN->Text) &&
 			regex->IsMatch(this->textBoxA->Text) &&
@@ -700,27 +701,140 @@ namespace CourseworkAaSDrepos {
 		return y;
 	}
 
-	void get_rand(double N, double A, double B, double C, double* Massiv)
+	void get_rand(double N, double A, double B, double C, double *arr)
 	{
 		srand((unsigned)time(0));
 		for (int i = 0; i < N; i++)
 		{
-			Massiv[i] = get_Bradford(A, B, C);
+			arr[i] = get_Bradford(A, B, C);
 		}
 	}
 
-	void fillDataGridView(DataGridView^ dataGridView, int N, double* Massiv, String^ numberColumnName, String^ elementColumnName)
+	void fillDataGridView(DataGridView^ dataGridView, int N, double* arr, String^ numberColumnName, String^ elementColumnName)
 	{
 		dataGridView->Rows->Clear();
 		for (int i = 0; i < N; i++)
 		{
 			dataGridView->Rows->Add();
 			dataGridView->Rows[i]->Cells[numberColumnName]->Value = i + 1;
-			dataGridView->Rows[i]->Cells[elementColumnName]->Value = Massiv[i];
+			dataGridView->Rows[i]->Cells[elementColumnName]->Value = arr[i];
 		}
 	}
 
+	void insertionSort(double *arr, int left, int right, int &c, int &s)
+	{
+		for (int i = left + 1; i <= right; i++) 
+		{
+			double temp = arr[i];
+			int j = i - 1;
+			while (j >= left && arr[j] > temp) 
+			{
+				c++;
+				arr[j + 1] = arr[j];
+				j--;
+				s++;
+			}
+			c++;
+			arr[j + 1] = temp;
+			s++;
+		}
+	}
 
+	// Merge function merges the sorted runs 
+	void merge(double *arr, int l, int m, int r,int &c, int &s)
+	{
+
+		// Original array is broken in two 
+		// parts left and right array 
+		int len1 = m - l + 1, len2 = r - m;
+		
+		double* left = new double[len1];
+		double* right = new double[len2];
+
+		for (int i = 0; i < len1; i++)
+			left[i] = arr[l + i];
+		for (int i = 0; i < len2; i++)
+			right[i] = arr[m + 1 + i];
+
+		int i = 0, j = 0, k = l;
+
+		// After comparing, we 
+		// merge those two array 
+		// in larger sub array 
+		while (i < len1 && j < len2) 
+		{
+			c++;
+			if (left[i] <= right[j]) {
+				arr[k] = left[i];
+				i++;
+			}
+			else {
+				arr[k] = right[j];
+				j++;
+			}
+			s++;
+			k++;
+		}
+
+		// Copy remaining elements of 
+		// left, if any 
+		while (i < len1) {
+			arr[k] = left[i];
+			k++;
+			i++;
+			s++;
+		}
+
+		// Copy remaining element of 
+		// right, if any 
+		while (j < len2) {
+			arr[k] = right[j];
+			k++;
+			j++;
+			s++;
+		}
+	}
+
+	// Iterative Timsort function to sort the 
+	// array[0...n-1] (similar to merge sort) 
+	void TimSort(double* arr, int n, int &c, int &s, std::chrono::milliseconds &t)
+	{
+		auto begin = chrono::steady_clock::now();
+		// Sort individual subarrays of size RUN 
+		for (int i = 0; i < n; i += RUN)
+			insertionSort(arr, i, min((i + RUN - 1), (n - 1)),c,s);
+
+		// Start merging from size RUN (or 32). 
+		// It will merge 
+		// to form size 64, then 128, 256 
+		// and so on .... 
+		for (int size = RUN; size < n; size = 2 * size) {
+
+			// pick starting point of 
+			// left sub array. We 
+			// are going to merge 
+			// arr[left..left+size-1] 
+			// and arr[left+size, left+2*size-1] 
+			// After every merge, we 
+			// increase left by 2*size 
+			for (int left = 0; left < n; left += 2 * size) {
+
+				// Find ending point of 
+				// left sub array 
+				// mid+1 is starting point 
+				// of right sub array 
+				int mid = left + size - 1;
+				int right = min((left + 2 * size - 1), (n - 1));
+
+				// merge sub array arr[left.....mid] & 
+				// arr[mid+1....right] 
+				if (mid < right)
+					merge(arr, left, mid, right,c,s);
+			}
+		}
+		auto end = chrono::steady_clock::now();
+		t = chrono::duration_cast<chrono::milliseconds>(end - begin);
+	}
 
 
 private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs^ e)
@@ -731,9 +845,8 @@ private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs
 
 private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	int c = 0;
-	int m = 0;
-	int unsigned t1, t2, t;
+	std::chrono::milliseconds t(0);
+	int c = 0, s = 0;
 	this->dataGridViewSource->Rows->Clear();
 	this->dataGridViewSorted->Rows->Clear();
 	int N = Convert::ToInt32(this->textBoxN->Text);
@@ -743,9 +856,11 @@ private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs
 	double* Massiv = new double[N];
 	get_rand(N, A, B, C, Massiv);
 	fillDataGridView(this->dataGridViewSource, N, Massiv, "NumberSource", "ElementSource");
-	/*TimSort(Massiv, N);*/
+	TimSort(Massiv, N, c,s,t);
 	fillDataGridView(this->dataGridViewSorted, N, Massiv, "NumberSorted", "ElementSorted");
-	textBoxTime->Text = t.ToString();
+	textBoxTime->Text = t.count().ToString();
+	textBoxCompare->Text = c.ToString();
+	textBoxPermutation->Text = s.ToString();
 
 	
 	

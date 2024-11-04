@@ -39,16 +39,26 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::Button^ buttonExit;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ sample_size;
+
+
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
 	private: System::Windows::Forms::DataGridView^ dataGridViewSource;
+	private: System::Windows::Forms::TextBox^ CHy_A_00;
+	private: System::Windows::Forms::TextBox^ CHy_A_01;
 
 
 
-	private: System::Windows::Forms::TextBox^ textBox2;
 
-	private: System::Windows::Forms::TextBox^ textBox4;
+
+
+
+
+
+
+
+
 
 
 
@@ -60,23 +70,39 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::Label^ label5;
 
 	private: System::Windows::Forms::GroupBox^ groupBox1;
+	private: System::Windows::Forms::TextBox^ CHy_ASUMM_0001;
 
 
 
 
-	private: System::Windows::Forms::TextBox^ textBox10;
+
+
+
+
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ Coefficient_A_0;
+
+
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::TextBox^ CHy_ASUMM_1011;
+
+	private: System::Windows::Forms::TextBox^ CHy_A_10;
+	private: System::Windows::Forms::TextBox^ CHy_A_11;
+
+
+
+
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
-	private: System::Windows::Forms::TextBox^ textBox8;
+	private: System::Windows::Forms::TextBox^ Coefficient_A_1;
+
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
 	private: System::Windows::Forms::TextBox^ textBox9;
@@ -116,11 +142,12 @@ namespace CourseworkAaSDrepos {
 			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EqForm::typeid));
 			this->buttonExit = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->sample_size = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->dataGridViewSource = (gcnew System::Windows::Forms::DataGridView());
@@ -129,23 +156,23 @@ namespace CourseworkAaSDrepos {
 			this->SizeMassiv = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->x_x = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->x_y = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->CHy_A_00 = (gcnew System::Windows::Forms::TextBox());
+			this->CHy_A_01 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->CHy_ASUMM_1011 = (gcnew System::Windows::Forms::TextBox());
+			this->CHy_A_10 = (gcnew System::Windows::Forms::TextBox());
+			this->CHy_A_11 = (gcnew System::Windows::Forms::TextBox());
+			this->CHy_ASUMM_0001 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->Coefficient_A_0 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->Coefficient_A_1 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
@@ -213,14 +240,14 @@ namespace CourseworkAaSDrepos {
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Объём выборки";
 			// 
-			// textBox1
+			// sample_size
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->sample_size->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox1->Location = System::Drawing::Point(154, 49);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 29);
-			this->textBox1->TabIndex = 3;
+			this->sample_size->Location = System::Drawing::Point(154, 49);
+			this->sample_size->Name = L"sample_size";
+			this->sample_size->Size = System::Drawing::Size(100, 29);
+			this->sample_size->TabIndex = 3;
 			// 
 			// label3
 			// 
@@ -251,8 +278,13 @@ namespace CourseworkAaSDrepos {
 			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Point;
 			series2->Legend = L"Legend1";
 			series2->Name = L"Series2";
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Series3";
 			this->chart1->Series->Add(series1);
 			this->chart1->Series->Add(series2);
+			this->chart1->Series->Add(series3);
 			this->chart1->Size = System::Drawing::Size(300, 300);
 			this->chart1->TabIndex = 5;
 			this->chart1->Text = L"chart1";
@@ -309,23 +341,23 @@ namespace CourseworkAaSDrepos {
 			this->x_y->Name = L"x_y";
 			this->x_y->ReadOnly = true;
 			// 
-			// textBox2
+			// CHy_A_00
 			// 
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->CHy_A_00->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CHy_A_00->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox2->Location = System::Drawing::Point(4, 24);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(84, 32);
-			this->textBox2->TabIndex = 9;
+			this->CHy_A_00->Location = System::Drawing::Point(4, 24);
+			this->CHy_A_00->Name = L"CHy_A_00";
+			this->CHy_A_00->Size = System::Drawing::Size(84, 32);
+			this->CHy_A_00->TabIndex = 9;
 			// 
-			// textBox4
+			// CHy_A_01
 			// 
-			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox4->Location = System::Drawing::Point(152, 24);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 32);
-			this->textBox4->TabIndex = 11;
+			this->CHy_A_01->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CHy_A_01->Location = System::Drawing::Point(152, 24);
+			this->CHy_A_01->Name = L"CHy_A_01";
+			this->CHy_A_01->Size = System::Drawing::Size(100, 32);
+			this->CHy_A_01->TabIndex = 11;
 			// 
 			// label5
 			// 
@@ -341,12 +373,12 @@ namespace CourseworkAaSDrepos {
 			// groupBox1
 			// 
 			this->groupBox1->BackColor = System::Drawing::Color::White;
-			this->groupBox1->Controls->Add(this->textBox5);
-			this->groupBox1->Controls->Add(this->textBox6);
-			this->groupBox1->Controls->Add(this->textBox7);
-			this->groupBox1->Controls->Add(this->textBox10);
-			this->groupBox1->Controls->Add(this->textBox2);
-			this->groupBox1->Controls->Add(this->textBox4);
+			this->groupBox1->Controls->Add(this->CHy_ASUMM_1011);
+			this->groupBox1->Controls->Add(this->CHy_A_10);
+			this->groupBox1->Controls->Add(this->CHy_A_11);
+			this->groupBox1->Controls->Add(this->CHy_ASUMM_0001);
+			this->groupBox1->Controls->Add(this->CHy_A_00);
+			this->groupBox1->Controls->Add(this->CHy_A_01);
 			this->groupBox1->Controls->Add(this->pictureBox2);
 			this->groupBox1->Controls->Add(this->pictureBox3);
 			this->groupBox1->Controls->Add(this->pictureBox1);
@@ -360,39 +392,39 @@ namespace CourseworkAaSDrepos {
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Система нормальных уравнений";
 			// 
-			// textBox5
+			// CHy_ASUMM_1011
 			// 
-			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox5->Location = System::Drawing::Point(314, 67);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(100, 32);
-			this->textBox5->TabIndex = 24;
+			this->CHy_ASUMM_1011->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CHy_ASUMM_1011->Location = System::Drawing::Point(314, 67);
+			this->CHy_ASUMM_1011->Name = L"CHy_ASUMM_1011";
+			this->CHy_ASUMM_1011->Size = System::Drawing::Size(100, 32);
+			this->CHy_ASUMM_1011->TabIndex = 24;
 			// 
-			// textBox6
+			// CHy_A_10
 			// 
-			this->textBox6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->CHy_A_10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CHy_A_10->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox6->Location = System::Drawing::Point(4, 67);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(84, 32);
-			this->textBox6->TabIndex = 22;
+			this->CHy_A_10->Location = System::Drawing::Point(4, 67);
+			this->CHy_A_10->Name = L"CHy_A_10";
+			this->CHy_A_10->Size = System::Drawing::Size(84, 32);
+			this->CHy_A_10->TabIndex = 22;
 			// 
-			// textBox7
+			// CHy_A_11
 			// 
-			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox7->Location = System::Drawing::Point(152, 67);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(100, 32);
-			this->textBox7->TabIndex = 23;
+			this->CHy_A_11->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CHy_A_11->Location = System::Drawing::Point(152, 67);
+			this->CHy_A_11->Name = L"CHy_A_11";
+			this->CHy_A_11->Size = System::Drawing::Size(100, 32);
+			this->CHy_A_11->TabIndex = 23;
 			// 
-			// textBox10
+			// CHy_ASUMM_0001
 			// 
-			this->textBox10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox10->Location = System::Drawing::Point(314, 25);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(100, 32);
-			this->textBox10->TabIndex = 20;
+			this->CHy_ASUMM_0001->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CHy_ASUMM_0001->Location = System::Drawing::Point(314, 25);
+			this->CHy_ASUMM_0001->Name = L"CHy_ASUMM_0001";
+			this->CHy_ASUMM_0001->Size = System::Drawing::Size(100, 32);
+			this->CHy_ASUMM_0001->TabIndex = 20;
 			// 
 			// pictureBox2
 			// 
@@ -445,14 +477,14 @@ namespace CourseworkAaSDrepos {
 			this->label4->TabIndex = 18;
 			this->label4->Text = L"Коэффициенты уравнения связи";
 			// 
-			// textBox3
+			// Coefficient_A_0
 			// 
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Coefficient_A_0->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox3->Location = System::Drawing::Point(351, 391);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 32);
-			this->textBox3->TabIndex = 19;
+			this->Coefficient_A_0->Location = System::Drawing::Point(351, 391);
+			this->Coefficient_A_0->Name = L"Coefficient_A_0";
+			this->Coefficient_A_0->Size = System::Drawing::Size(100, 32);
+			this->Coefficient_A_0->TabIndex = 19;
 			// 
 			// pictureBox5
 			// 
@@ -474,14 +506,14 @@ namespace CourseworkAaSDrepos {
 			this->pictureBox6->TabIndex = 28;
 			this->pictureBox6->TabStop = false;
 			// 
-			// textBox8
+			// Coefficient_A_1
 			// 
-			this->textBox8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Coefficient_A_1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox8->Location = System::Drawing::Point(560, 391);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(100, 32);
-			this->textBox8->TabIndex = 29;
+			this->Coefficient_A_1->Location = System::Drawing::Point(560, 391);
+			this->Coefficient_A_1->Name = L"Coefficient_A_1";
+			this->Coefficient_A_1->Size = System::Drawing::Size(100, 32);
+			this->Coefficient_A_1->TabIndex = 29;
 			// 
 			// label6
 			// 
@@ -657,6 +689,7 @@ namespace CourseworkAaSDrepos {
 			this->buttonClear->TabIndex = 1;
 			this->buttonClear->Text = L"Очистка";
 			this->buttonClear->UseVisualStyleBackColor = true;
+			this->buttonClear->Click += gcnew System::EventHandler(this, &EqForm::buttonClear_Click);
 			// 
 			// buttonMHK
 			// 
@@ -689,17 +722,17 @@ namespace CourseworkAaSDrepos {
 			this->Controls->Add(this->textBox9);
 			this->Controls->Add(this->pictureBox7);
 			this->Controls->Add(this->label6);
-			this->Controls->Add(this->textBox8);
+			this->Controls->Add(this->Coefficient_A_1);
 			this->Controls->Add(this->pictureBox6);
 			this->Controls->Add(this->pictureBox5);
-			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->Coefficient_A_0);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->dataGridViewSource);
 			this->Controls->Add(this->chart1);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->sample_size);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox8);
@@ -752,6 +785,8 @@ MHKm:
 		goto MHKm;
 	}
 
+}
+private: System::Void buttonClear_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
