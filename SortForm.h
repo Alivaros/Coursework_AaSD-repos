@@ -83,6 +83,8 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberSorted;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementSorted;
+	private: System::Windows::Forms::RadioButton^ radioButton2;
+	private: System::Windows::Forms::RadioButton^ radioButton1;
 
 
 
@@ -141,6 +143,8 @@ namespace CourseworkAaSDrepos {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -226,6 +230,8 @@ namespace CourseworkAaSDrepos {
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::SystemColors::Control;
+			this->groupBox2->Controls->Add(this->radioButton2);
+			this->groupBox2->Controls->Add(this->radioButton1);
 			this->groupBox2->Controls->Add(this->textBoxC);
 			this->groupBox2->Controls->Add(this->textBox7);
 			this->groupBox2->Controls->Add(this->textBoxB);
@@ -596,11 +602,33 @@ namespace CourseworkAaSDrepos {
 			// pictureBox3
 			// 
 			this->pictureBox3->BackColor = System::Drawing::SystemColors::Control;
-			this->pictureBox3->Location = System::Drawing::Point(319, 31);
+			this->pictureBox3->Location = System::Drawing::Point(319, 34);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(460, 336);
+			this->pictureBox3->Size = System::Drawing::Size(460, 333);
 			this->pictureBox3->TabIndex = 13;
 			this->pictureBox3->TabStop = false;
+			// 
+			// radioButton1
+			// 
+			this->radioButton1->AutoSize = true;
+			this->radioButton1->Location = System::Drawing::Point(174, 121);
+			this->radioButton1->Name = L"radioButton1";
+			this->radioButton1->Size = System::Drawing::Size(125, 25);
+			this->radioButton1->TabIndex = 10;
+			this->radioButton1->TabStop = true;
+			this->radioButton1->Text = L"radioButton1";
+			this->radioButton1->UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this->radioButton2->AutoSize = true;
+			this->radioButton2->Location = System::Drawing::Point(174, 152);
+			this->radioButton2->Name = L"radioButton2";
+			this->radioButton2->Size = System::Drawing::Size(125, 25);
+			this->radioButton2->TabIndex = 11;
+			this->radioButton2->TabStop = true;
+			this->radioButton2->Text = L"radioButton2";
+			this->radioButton2->UseVisualStyleBackColor = true;
 			// 
 			// SortForm
 			// 
@@ -740,12 +768,12 @@ namespace CourseworkAaSDrepos {
 		}
 	}
 
-	// Merge function merges the sorted runs 
+	// Функция слияния объединяет отсортированные участки
 	void merge(double *arr, int l, int m, int r,int &c, int &s)
 	{
 
-		// Original array is broken in two 
-		// parts left and right array 
+		// Исходный массив разбит на две части:
+		// левый и правый массив
 		int len1 = m - l + 1, len2 = r - m;
 		
 		double* left = new double[len1];
@@ -758,9 +786,9 @@ namespace CourseworkAaSDrepos {
 
 		int i = 0, j = 0, k = l;
 
-		// After comparing, we 
-		// merge those two array 
-		// in larger sub array 
+		// после сравнения, мы
+		// объединяем два массива
+		// в большой подмассив
 		while (i < len1 && j < len2) 
 		{
 			c++;
@@ -776,8 +804,8 @@ namespace CourseworkAaSDrepos {
 			k++;
 		}
 
-		// Copy remaining elements of 
-		// left, if any 
+		// Копируем ост элементы
+		// из левого массива, если есть
 		while (i < len1) {
 			arr[k] = left[i];
 			k++;
@@ -785,8 +813,8 @@ namespace CourseworkAaSDrepos {
 			s++;
 		}
 
-		// Copy remaining element of 
-		// right, if any 
+		// Копируем ост элементы
+		// из правого массива, если есть
 		while (j < len2) {
 			arr[k] = right[j];
 			k++;
@@ -795,39 +823,39 @@ namespace CourseworkAaSDrepos {
 		}
 	}
 
-	// Iterative Timsort function to sort the 
-	// array[0...n-1] (similar to merge sort) 
+	//  Итеративная функция Timsoft для сортировки
+	// массива	[0...n-1] (похожа на сортировку слиянием)
 	void TimSort(double* arr, int n, int &c, int &s, std::chrono::milliseconds &t)
 	{
 		auto begin = chrono::steady_clock::now();
-		// Sort individual subarrays of size RUN 
+		// Сортируем отдельные подмассивы размера RUN
 		for (int i = 0; i < n; i += RUN)
 			insertionSort(arr, i, min((i + RUN - 1), (n - 1)),c,s);
 
-		// Start merging from size RUN (or 32). 
-		// It will merge 
-		// to form size 64, then 128, 256 
-		// and so on .... 
+		// Начинаем слияние с размера RUN 
+		// Сливаем до 
+		// формирования размера 64, затем 128, 256 
+		// м так далее .... 
 		for (int size = RUN; size < n; size = 2 * size) {
 
-			// pick starting point of 
-			// left sub array. We 
-			// are going to merge 
+			// выбираем начальную точку
+			// левого подмассива. Мы собираемся
+			// сливать
 			// arr[left..left+size-1] 
-			// and arr[left+size, left+2*size-1] 
-			// After every merge, we 
-			// increase left by 2*size 
+			// и arr[left+size, left+2*size-1] 
+			// После каждого слияния мы
+			// увеличиваем left на 2*size 
 			for (int left = 0; left < n; left += 2 * size) {
 
-				// Find ending point of 
-				// left sub array 
-				// mid+1 is starting point 
-				// of right sub array 
+				// Находим конечную точку
+				// левого подмассива 
+				// mid+1 - начальная точка 
+				// правого подмассив
 				int mid = left + size - 1;
 				int right = min((left + 2 * size - 1), (n - 1));
 
-				// merge sub array arr[left.....mid] & 
-				// arr[mid+1....right] 
+				// сливаем подмассивы arr[left.....mid] & 
+				// arr[mid+1....right]
 				if (mid < right)
 					merge(arr, left, mid, right,c,s);
 			}

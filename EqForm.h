@@ -105,17 +105,28 @@ namespace CourseworkAaSDrepos {
 
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
-	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::TextBox^ EqID1;
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox8;
-	private: System::Windows::Forms::TextBox^ textBox11;
+	private: System::Windows::Forms::TextBox^ EqID2;
+
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox9;
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TextBox^ textBox12;
-	private: System::Windows::Forms::TextBox^ textBox13;
+	private: System::Windows::Forms::TextBox^ Coefficient_correlation;
+	private: System::Windows::Forms::TextBox^ Coefficient_determination;
+
+
+
 	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::TextBox^ textBox14;
+	private: System::Windows::Forms::TextBox^ Coefficient_elsatic;
+
+
 	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::TextBox^ textBox15;
+private: System::Windows::Forms::TextBox^ Coefficient_beta;
+
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
 	private: System::Windows::Forms::Button^ buttonCalc;
@@ -138,11 +149,11 @@ namespace CourseworkAaSDrepos {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EqForm::typeid));
 			this->buttonExit = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -175,17 +186,17 @@ namespace CourseworkAaSDrepos {
 			this->Coefficient_A_1 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->EqID1 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->EqID2 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
+			this->Coefficient_correlation = (gcnew System::Windows::Forms::TextBox());
+			this->Coefficient_determination = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
+			this->Coefficient_elsatic = (gcnew System::Windows::Forms::TextBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
+			this->Coefficient_beta = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->buttonCalc = (gcnew System::Windows::Forms::Button());
@@ -262,29 +273,29 @@ namespace CourseworkAaSDrepos {
 			// 
 			// chart1
 			// 
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
-			legend1->Enabled = false;
-			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
+			chartArea2->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea2);
+			legend2->Enabled = false;
+			legend2->Name = L"Legend1";
+			this->chart1->Legends->Add(legend2);
 			this->chart1->Location = System::Drawing::Point(472, 82);
 			this->chart1->Name = L"chart1";
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series1->Legend = L"Legend1";
-			series1->Name = L"Series1";
-			series1->YValuesPerPoint = 6;
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Point;
-			series2->Legend = L"Legend1";
-			series2->Name = L"Series2";
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
-			series3->Legend = L"Legend1";
-			series3->Name = L"Series3";
-			this->chart1->Series->Add(series1);
-			this->chart1->Series->Add(series2);
-			this->chart1->Series->Add(series3);
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Series1";
+			series4->YValuesPerPoint = 6;
+			series5->ChartArea = L"ChartArea1";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Point;
+			series5->Legend = L"Legend1";
+			series5->Name = L"Series2";
+			series6->ChartArea = L"ChartArea1";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series6->Legend = L"Legend1";
+			series6->Name = L"Series3";
+			this->chart1->Series->Add(series4);
+			this->chart1->Series->Add(series5);
+			this->chart1->Series->Add(series6);
 			this->chart1->Size = System::Drawing::Size(300, 300);
 			this->chart1->TabIndex = 5;
 			this->chart1->Text = L"chart1";
@@ -528,6 +539,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// pictureBox7
 			// 
+			this->pictureBox7->BackColor = System::Drawing::Color::White;
 			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
 			this->pictureBox7->Location = System::Drawing::Point(154, 428);
 			this->pictureBox7->Name = L"pictureBox7";
@@ -536,17 +548,18 @@ namespace CourseworkAaSDrepos {
 			this->pictureBox7->TabIndex = 32;
 			this->pictureBox7->TabStop = false;
 			// 
-			// textBox9
+			// EqID1
 			// 
-			this->textBox9->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->EqID1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox9->Location = System::Drawing::Point(220, 430);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(100, 32);
-			this->textBox9->TabIndex = 31;
+			this->EqID1->Location = System::Drawing::Point(220, 430);
+			this->EqID1->Name = L"EqID1";
+			this->EqID1->Size = System::Drawing::Size(100, 32);
+			this->EqID1->TabIndex = 31;
 			// 
 			// pictureBox8
 			// 
+			this->pictureBox8->BackColor = System::Drawing::Color::White;
 			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
 			this->pictureBox8->Location = System::Drawing::Point(303, 427);
 			this->pictureBox8->Name = L"pictureBox8";
@@ -555,17 +568,18 @@ namespace CourseworkAaSDrepos {
 			this->pictureBox8->TabIndex = 33;
 			this->pictureBox8->TabStop = false;
 			// 
-			// textBox11
+			// EqID2
 			// 
-			this->textBox11->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->EqID2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox11->Location = System::Drawing::Point(359, 430);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(100, 32);
-			this->textBox11->TabIndex = 34;
+			this->EqID2->Location = System::Drawing::Point(359, 430);
+			this->EqID2->Name = L"EqID2";
+			this->EqID2->Size = System::Drawing::Size(100, 32);
+			this->EqID2->TabIndex = 34;
 			// 
 			// pictureBox9
 			// 
+			this->pictureBox9->BackColor = System::Drawing::Color::White;
 			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
 			this->pictureBox9->Location = System::Drawing::Point(441, 427);
 			this->pictureBox9->Name = L"pictureBox9";
@@ -585,23 +599,23 @@ namespace CourseworkAaSDrepos {
 			this->label7->TabIndex = 36;
 			this->label7->Text = L"Коэффициент корреляции";
 			// 
-			// textBox12
+			// Coefficient_correlation
 			// 
-			this->textBox12->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox12->Location = System::Drawing::Point(228, 470);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(100, 32);
-			this->textBox12->TabIndex = 37;
+			this->Coefficient_correlation->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->Coefficient_correlation->Location = System::Drawing::Point(228, 470);
+			this->Coefficient_correlation->Name = L"Coefficient_correlation";
+			this->Coefficient_correlation->Size = System::Drawing::Size(100, 32);
+			this->Coefficient_correlation->TabIndex = 37;
 			// 
-			// textBox13
+			// Coefficient_determination
 			// 
-			this->textBox13->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox13->Location = System::Drawing::Point(573, 466);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(96, 32);
-			this->textBox13->TabIndex = 39;
+			this->Coefficient_determination->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->Coefficient_determination->Location = System::Drawing::Point(573, 466);
+			this->Coefficient_determination->Name = L"Coefficient_determination";
+			this->Coefficient_determination->Size = System::Drawing::Size(96, 32);
+			this->Coefficient_determination->TabIndex = 39;
 			// 
 			// label8
 			// 
@@ -614,14 +628,14 @@ namespace CourseworkAaSDrepos {
 			this->label8->TabIndex = 38;
 			this->label8->Text = L"Коэффициент детерминации";
 			// 
-			// textBox14
+			// Coefficient_elsatic
 			// 
-			this->textBox14->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Coefficient_elsatic->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox14->Location = System::Drawing::Point(252, 508);
-			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(100, 32);
-			this->textBox14->TabIndex = 41;
+			this->Coefficient_elsatic->Location = System::Drawing::Point(252, 508);
+			this->Coefficient_elsatic->Name = L"Coefficient_elsatic";
+			this->Coefficient_elsatic->Size = System::Drawing::Size(100, 32);
+			this->Coefficient_elsatic->TabIndex = 41;
 			// 
 			// label9
 			// 
@@ -634,14 +648,14 @@ namespace CourseworkAaSDrepos {
 			this->label9->TabIndex = 40;
 			this->label9->Text = L"Коэффициент эластичности";
 			// 
-			// textBox15
+			// Coefficient_beta
 			// 
-			this->textBox15->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Coefficient_beta->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox15->Location = System::Drawing::Point(572, 508);
-			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(96, 32);
-			this->textBox15->TabIndex = 43;
+			this->Coefficient_beta->Location = System::Drawing::Point(572, 508);
+			this->Coefficient_beta->Name = L"Coefficient_beta";
+			this->Coefficient_beta->Size = System::Drawing::Size(96, 32);
+			this->Coefficient_beta->TabIndex = 43;
 			// 
 			// label10
 			// 
@@ -711,15 +725,15 @@ namespace CourseworkAaSDrepos {
 			this->ControlBox = false;
 			this->Controls->Add(this->buttonMHK);
 			this->Controls->Add(this->groupBox2);
-			this->Controls->Add(this->textBox15);
+			this->Controls->Add(this->Coefficient_beta);
 			this->Controls->Add(this->label10);
-			this->Controls->Add(this->textBox14);
+			this->Controls->Add(this->Coefficient_elsatic);
 			this->Controls->Add(this->label9);
-			this->Controls->Add(this->textBox13);
-			this->Controls->Add(this->textBox12);
+			this->Controls->Add(this->Coefficient_determination);
+			this->Controls->Add(this->Coefficient_correlation);
 			this->Controls->Add(this->label7);
-			this->Controls->Add(this->textBox11);
-			this->Controls->Add(this->textBox9);
+			this->Controls->Add(this->EqID2);
+			this->Controls->Add(this->EqID1);
 			this->Controls->Add(this->pictureBox7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->Coefficient_A_1);
@@ -765,6 +779,21 @@ namespace CourseworkAaSDrepos {
 
 		}
 #pragma endregion
+
+	/*void init_rand() 
+	{ 
+		srand((unsigned)time(0));
+	}*/
+
+	/*int rand_gen()
+	{
+		int start = 9000;
+		int end = 50000;
+		int x = rand() % (end - start + 1) + start;
+		return x;
+	}*/
+
+
 	private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->DialogResult = System::Windows::Forms::DialogResult::OK;
@@ -786,7 +815,27 @@ MHKm:
 	}
 
 }
-private: System::Void buttonClear_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void buttonClear_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	sample_size->Clear();
+	CHy_A_00->Clear();
+	CHy_A_01->Clear();
+	CHy_ASUMM_0001->Clear();
+	CHy_A_10->Clear();
+	CHy_A_11->Clear();
+	Coefficient_A_0->Clear();
+	Coefficient_A_1->Clear();
+	EqID1->Clear();
+	EqID2->Clear();
+	Coefficient_correlation->Clear();
+	Coefficient_elsatic->Clear();
+	Coefficient_determination->Clear();
+	Coefficient_beta->Clear();
+	
+
+
+
+
 }
 };
 }

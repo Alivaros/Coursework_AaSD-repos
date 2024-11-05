@@ -5,3 +5,10 @@ C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64
 C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.InfoForm.resources
 C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.SortForm.resources
 C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.MHKForm.resources
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\Coursework_AaSD-repos.vcxproj.AssemblyReference.cache
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.EqForm.resources
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.InfoForm.resources
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.MainForm.resources
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.MHKForm.resources
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\CourseworkAaSDrepos.SortForm.resources
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\Coursewo.BB7DCDB6\x64\Debug\Coursework_AaSD-repos.vcxproj.GenerateResource.cache
