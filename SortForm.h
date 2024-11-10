@@ -1,7 +1,7 @@
 #pragma once
 #include "math.h"
 #include <stdlib.h>
-#include <chrono>
+#include <ctime>
 #include <algorithm>
 
 
@@ -83,8 +83,8 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberSorted;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementSorted;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
+
+
 
 
 
@@ -143,8 +143,6 @@ namespace CourseworkAaSDrepos {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -230,8 +228,6 @@ namespace CourseworkAaSDrepos {
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::SystemColors::Control;
-			this->groupBox2->Controls->Add(this->radioButton2);
-			this->groupBox2->Controls->Add(this->radioButton1);
 			this->groupBox2->Controls->Add(this->textBoxC);
 			this->groupBox2->Controls->Add(this->textBox7);
 			this->groupBox2->Controls->Add(this->textBoxB);
@@ -608,28 +604,6 @@ namespace CourseworkAaSDrepos {
 			this->pictureBox3->TabIndex = 13;
 			this->pictureBox3->TabStop = false;
 			// 
-			// radioButton1
-			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(174, 121);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(125, 25);
-			this->radioButton1->TabIndex = 10;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"radioButton1";
-			this->radioButton1->UseVisualStyleBackColor = true;
-			// 
-			// radioButton2
-			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(174, 152);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(125, 25);
-			this->radioButton2->TabIndex = 11;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"radioButton2";
-			this->radioButton2->UseVisualStyleBackColor = true;
-			// 
 			// SortForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -738,14 +712,14 @@ namespace CourseworkAaSDrepos {
 		}
 	}
 
-	void fillDataGridView(DataGridView^ dataGridView, int N, double* arr, String^ numberColumnName, String^ elementColumnName)
+	void fillDataGridView(DataGridView^ dgv, int N, double* arr, String^ numberColumnName, String^ elementColumnName)
 	{
-		dataGridView->Rows->Clear();
+		dgv->Rows->Clear();
 		for (int i = 0; i < N; i++)
 		{
-			dataGridView->Rows->Add();
-			dataGridView->Rows[i]->Cells[numberColumnName]->Value = i + 1;
-			dataGridView->Rows[i]->Cells[elementColumnName]->Value = arr[i];
+			dgv->Rows->Add();
+			dgv->Rows[i]->Cells[numberColumnName]->Value = i + 1;
+			dgv->Rows[i]->Cells[elementColumnName]->Value = arr[i];
 		}
 	}
 
@@ -825,9 +799,8 @@ namespace CourseworkAaSDrepos {
 
 	//  Итеративная функция Timsoft для сортировки
 	// массива	[0...n-1] (похожа на сортировку слиянием)
-	void TimSort(double* arr, int n, int &c, int &s, std::chrono::milliseconds &t)
+	void TimSort(double* arr, int n, int &c, int &s)
 	{
-		auto begin = chrono::steady_clock::now();
 		// Сортируем отдельные подмассивы размера RUN
 		for (int i = 0; i < n; i += RUN)
 			insertionSort(arr, i, min((i + RUN - 1), (n - 1)),c,s);
@@ -860,8 +833,6 @@ namespace CourseworkAaSDrepos {
 					merge(arr, left, mid, right,c,s);
 			}
 		}
-		auto end = chrono::steady_clock::now();
-		t = chrono::duration_cast<chrono::milliseconds>(end - begin);
 	}
 
 
@@ -873,8 +844,9 @@ private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs
 
 private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	std::chrono::milliseconds t(0);
+
 	int c = 0, s = 0;
+	unsigned int t1 = 0, t2 = 0, t = 0;
 	this->dataGridViewSource->Rows->Clear();
 	this->dataGridViewSorted->Rows->Clear();
 	int N = Convert::ToInt32(this->textBoxN->Text);
@@ -884,9 +856,12 @@ private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs
 	double* Massiv = new double[N];
 	get_rand(N, A, B, C, Massiv);
 	fillDataGridView(this->dataGridViewSource, N, Massiv, "NumberSource", "ElementSource");
-	TimSort(Massiv, N, c,s,t);
+	t1 = clock();
+	TimSort(Massiv, N, c,s);
+	t2 = clock();
+	t = t2-t1;
 	fillDataGridView(this->dataGridViewSorted, N, Massiv, "NumberSorted", "ElementSorted");
-	textBoxTime->Text = t.count().ToString();
+	textBoxTime->Text = t.ToString();
 	textBoxCompare->Text = c.ToString();
 	textBoxPermutation->Text = s.ToString();
 
