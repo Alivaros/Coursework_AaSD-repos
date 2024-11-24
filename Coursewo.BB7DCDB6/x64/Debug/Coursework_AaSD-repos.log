@@ -1,5 +1,17 @@
 ﻿  EqForm.cpp
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,51): warning C4101: s_y: неиспользованная локальная переменная
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,46): warning C4101: s_x: неиспользованная локальная переменная
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,9): warning C4101: avg_x: неиспользованная локальная переменная
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,16): warning C4101: avg_y: неиспользованная локальная переменная
   MainForm.cpp
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,51): warning C4101: s_y: неиспользованная локальная переменная
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,46): warning C4101: s_x: неиспользованная локальная переменная
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,9): warning C4101: avg_x: неиспользованная локальная переменная
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1146,16): warning C4101: avg_y: неиспользованная локальная переменная
   Создание кода...
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1182,1): warning C4700: использована неинициализированная локальная переменная "coef_beta"
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1183,1): warning C4700: использована неинициализированная локальная переменная "coef_elsat"
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1182,1): warning C4700: использована неинициализированная локальная переменная "coef_beta"
+C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1183,1): warning C4700: использована неинициализированная локальная переменная "coef_elsat"
   EqForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
-  Coursework_AaSD-repos.vcxproj -> C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\x64\Debug\Coursework_AaSD-repos.exe
+  Coursework_AaSD-repos.vcxproj -> C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\x64\Debug\Coursework_AaSD-repos.exe

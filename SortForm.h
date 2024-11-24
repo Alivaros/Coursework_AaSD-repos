@@ -471,9 +471,9 @@ namespace CourseworkAaSDrepos {
 				static_cast<System::Byte>(204)));
 			this->label7->Location = System::Drawing::Point(34, 16);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(192, 21);
+			this->label7->Size = System::Drawing::Size(161, 21);
 			this->label7->TabIndex = 6;
-			this->label7->Text = L"Время сортировки, мс";
+			this->label7->Text = L"Время сортировки";
 			// 
 			// label6
 			// 

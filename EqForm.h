@@ -29,7 +29,7 @@ namespace CourseworkAaSDrepos {
 			//TODO: добавьте код конструктора
 			//
 		}
-
+		
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -398,6 +398,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// CHy_N
 			// 
+			this->CHy_N->BackColor = System::Drawing::SystemColors::Window;
 			this->CHy_N->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->CHy_N->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -410,6 +411,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// CHy_X_0
 			// 
+			this->CHy_X_0->BackColor = System::Drawing::SystemColors::Window;
 			this->CHy_X_0->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->CHy_X_0->Location = System::Drawing::Point(152, 24);
 			this->CHy_X_0->Name = L"CHy_X_0";
@@ -452,6 +454,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// CHy_X_Y
 			// 
+			this->CHy_X_Y->BackColor = System::Drawing::SystemColors::Window;
 			this->CHy_X_Y->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->CHy_X_Y->Location = System::Drawing::Point(347, 67);
 			this->CHy_X_Y->Name = L"CHy_X_Y";
@@ -461,6 +464,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// CHy_X_1
 			// 
+			this->CHy_X_1->BackColor = System::Drawing::SystemColors::Window;
 			this->CHy_X_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->CHy_X_1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -473,6 +477,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// CHy_X_X
 			// 
+			this->CHy_X_X->BackColor = System::Drawing::SystemColors::Window;
 			this->CHy_X_X->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->CHy_X_X->Location = System::Drawing::Point(152, 67);
 			this->CHy_X_X->Name = L"CHy_X_X";
@@ -482,6 +487,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// CHy_Y
 			// 
+			this->CHy_Y->BackColor = System::Drawing::SystemColors::Window;
 			this->CHy_Y->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->CHy_Y->Location = System::Drawing::Point(347, 25);
 			this->CHy_Y->Name = L"CHy_Y";
@@ -542,11 +548,13 @@ namespace CourseworkAaSDrepos {
 			// 
 			// Coefficient_A_0
 			// 
+			this->Coefficient_A_0->BackColor = System::Drawing::SystemColors::Window;
 			this->Coefficient_A_0->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Coefficient_A_0->Location = System::Drawing::Point(351, 391);
 			this->Coefficient_A_0->Name = L"Coefficient_A_0";
-			this->Coefficient_A_0->Size = System::Drawing::Size(100, 32);
+			this->Coefficient_A_0->ReadOnly = true;
+			this->Coefficient_A_0->Size = System::Drawing::Size(111, 32);
 			this->Coefficient_A_0->TabIndex = 19;
 			// 
 			// pictureBox5
@@ -562,7 +570,7 @@ namespace CourseworkAaSDrepos {
 			// pictureBox6
 			// 
 			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
-			this->pictureBox6->Location = System::Drawing::Point(484, 389);
+			this->pictureBox6->Location = System::Drawing::Point(468, 389);
 			this->pictureBox6->Name = L"pictureBox6";
 			this->pictureBox6->Size = System::Drawing::Size(80, 38);
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -571,11 +579,13 @@ namespace CourseworkAaSDrepos {
 			// 
 			// Coefficient_A_1
 			// 
+			this->Coefficient_A_1->BackColor = System::Drawing::SystemColors::Window;
 			this->Coefficient_A_1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->Coefficient_A_1->Location = System::Drawing::Point(560, 391);
+			this->Coefficient_A_1->Location = System::Drawing::Point(544, 391);
 			this->Coefficient_A_1->Name = L"Coefficient_A_1";
-			this->Coefficient_A_1->Size = System::Drawing::Size(100, 32);
+			this->Coefficient_A_1->ReadOnly = true;
+			this->Coefficient_A_1->Size = System::Drawing::Size(116, 32);
 			this->Coefficient_A_1->TabIndex = 29;
 			// 
 			// label6
@@ -602,10 +612,12 @@ namespace CourseworkAaSDrepos {
 			// 
 			// EqA_0
 			// 
+			this->EqA_0->BackColor = System::Drawing::SystemColors::Window;
 			this->EqA_0->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->EqA_0->Location = System::Drawing::Point(220, 430);
 			this->EqA_0->Name = L"EqA_0";
+			this->EqA_0->ReadOnly = true;
 			this->EqA_0->Size = System::Drawing::Size(100, 32);
 			this->EqA_0->TabIndex = 31;
 			// 
@@ -622,10 +634,12 @@ namespace CourseworkAaSDrepos {
 			// 
 			// EqA_1
 			// 
+			this->EqA_1->BackColor = System::Drawing::SystemColors::Window;
 			this->EqA_1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->EqA_1->Location = System::Drawing::Point(359, 430);
 			this->EqA_1->Name = L"EqA_1";
+			this->EqA_1->ReadOnly = true;
 			this->EqA_1->Size = System::Drawing::Size(100, 32);
 			this->EqA_1->TabIndex = 34;
 			// 
@@ -653,19 +667,23 @@ namespace CourseworkAaSDrepos {
 			// 
 			// Coefficient_correlation
 			// 
+			this->Coefficient_correlation->BackColor = System::Drawing::SystemColors::Window;
 			this->Coefficient_correlation->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->Coefficient_correlation->Location = System::Drawing::Point(228, 470);
 			this->Coefficient_correlation->Name = L"Coefficient_correlation";
+			this->Coefficient_correlation->ReadOnly = true;
 			this->Coefficient_correlation->Size = System::Drawing::Size(100, 32);
 			this->Coefficient_correlation->TabIndex = 37;
 			// 
 			// Coefficient_determination
 			// 
+			this->Coefficient_determination->BackColor = System::Drawing::SystemColors::Window;
 			this->Coefficient_determination->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-			this->Coefficient_determination->Location = System::Drawing::Point(573, 466);
+			this->Coefficient_determination->Location = System::Drawing::Point(569, 466);
 			this->Coefficient_determination->Name = L"Coefficient_determination";
+			this->Coefficient_determination->ReadOnly = true;
 			this->Coefficient_determination->Size = System::Drawing::Size(96, 32);
 			this->Coefficient_determination->TabIndex = 39;
 			// 
@@ -682,10 +700,12 @@ namespace CourseworkAaSDrepos {
 			// 
 			// Coefficient_elsatic
 			// 
+			this->Coefficient_elsatic->BackColor = System::Drawing::SystemColors::Window;
 			this->Coefficient_elsatic->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Coefficient_elsatic->Location = System::Drawing::Point(252, 508);
 			this->Coefficient_elsatic->Name = L"Coefficient_elsatic";
+			this->Coefficient_elsatic->ReadOnly = true;
 			this->Coefficient_elsatic->Size = System::Drawing::Size(100, 32);
 			this->Coefficient_elsatic->TabIndex = 41;
 			// 
@@ -702,10 +722,12 @@ namespace CourseworkAaSDrepos {
 			// 
 			// Coefficient_beta
 			// 
+			this->Coefficient_beta->BackColor = System::Drawing::SystemColors::Window;
 			this->Coefficient_beta->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->Coefficient_beta->Location = System::Drawing::Point(572, 508);
+			this->Coefficient_beta->Location = System::Drawing::Point(568, 508);
 			this->Coefficient_beta->Name = L"Coefficient_beta";
+			this->Coefficient_beta->ReadOnly = true;
 			this->Coefficient_beta->Size = System::Drawing::Size(96, 32);
 			this->Coefficient_beta->TabIndex = 43;
 			// 
@@ -736,6 +758,7 @@ namespace CourseworkAaSDrepos {
 			// 
 			// buttonCalc
 			// 
+			this->buttonCalc->Enabled = false;
 			this->buttonCalc->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonCalc->Location = System::Drawing::Point(15, 28);
@@ -1091,6 +1114,7 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 		t2 = clock();
 		t[i] = t2 - t1;
 		delete[] Massiv;
+	
 	}
 	fillDataGridView(size, t, N);
 
@@ -1119,7 +1143,7 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 	}
 	
 	
-
+	double avg_x, avg_y, coef_elsat, coef_beta, s_x, s_y;
 	/*delta = (size * sumx_x) - (sumx * sumx);
 	delta_a0 = (sumy * sumx_x) - (sumx_y * sumx);
 	delta_a1 = (size * sumx_y) - (sumx * sumx_x);*/
@@ -1131,7 +1155,16 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 	double a_1 = delta_a1 / delta;
 	double ryx = ((size * sumx_y) - (sumx * sumy)) / (sqrt(size * sumx_x - (pow(sumx, 2))) * sqrt(size * sumy_y - (pow(sumy, 2))));
 	double ryx_2 = pow(ryx, 2);
+	/*avg_x = sumx / size;
+	avg_y = sumy / size;
+	s_x = sqrt(pow((sumx - avg_x), 2) / size);
+	s_y = sqrt(pow((sumy - avg_y), 2) / size);
+	coef_beta = (a_1 * s_x) / s_y;
+	coef_elsat = (a_1 * avg_x) / avg_y;*/
 
+	
+
+	
 
 
 	CHy_N->Text = Convert::ToString(size);
@@ -1145,8 +1178,9 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 	EqA_0->Text = Convert::ToString(a_0);
 	EqA_1->Text = Convert::ToString(a_1);
 	Coefficient_correlation->Text = String::Format("{0:F3}", ryx);
-	Coefficient_determination->Text = String::Format("{0:F6}", ryx_2);
-
+	Coefficient_determination->Text = String::Format("{0:F3}", ryx_2 );
+	Coefficient_beta->Text = Convert::ToString(coef_beta);
+	Coefficient_elsatic->Text = Convert::ToString(coef_elsat);
 
 
 
@@ -1166,7 +1200,9 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 	Console::WriteLine("delta_1: " + delta_a1);
 	Console::WriteLine("a_0: " + a_0);
 	Console::WriteLine("a_1: " + a_1);
-
+	Console::WriteLine("Коэф корреляции " + ryx);
+	Console::WriteLine("Коэф б" + coef_beta);
+	Console::WriteLine("Коэф э" + coef_elsat);
 
 
 
@@ -1177,6 +1213,8 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 
 	delete[] t;
 	delete[] N;
+	
+
 }
 private: System::Void sample_size_TextChanged(System::Object^ sender, System::EventArgs^ e) 
 {
