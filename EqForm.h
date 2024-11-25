@@ -155,12 +155,18 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::Button^ buttonClear;
 	private: System::Windows::Forms::Button^ buttonMHK;
 	private: System::Windows::Forms::PictureBox^ pictureBox10;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Number;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Time;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ SizeMassiv;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ x_x;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ x_y;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Number;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Time;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ SizeMassiv;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ x_x;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ x_y;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
+
+
+
+
+
+
 
 
 	protected:
@@ -193,12 +199,6 @@ namespace CourseworkAaSDrepos {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->dataGridViewSourceStaticData = (gcnew System::Windows::Forms::DataGridView());
-			this->Number = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Time = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->SizeMassiv = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->x_x = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->x_y = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->y_y = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->CHy_N = (gcnew System::Windows::Forms::TextBox());
 			this->CHy_X_0 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -235,6 +235,12 @@ namespace CourseworkAaSDrepos {
 			this->buttonClear = (gcnew System::Windows::Forms::Button());
 			this->buttonMHK = (gcnew System::Windows::Forms::Button());
 			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
+			this->Number = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Time = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->SizeMassiv = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->x_x = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->x_y = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->y_y = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSourceStaticData))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -355,46 +361,6 @@ namespace CourseworkAaSDrepos {
 			this->dataGridViewSourceStaticData->Size = System::Drawing::Size(454, 153);
 			this->dataGridViewSourceStaticData->TabIndex = 7;
 			this->dataGridViewSourceStaticData->TabStop = false;
-			// 
-			// Number
-			// 
-			this->Number->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->Number->HeaderText = L"Номер";
-			this->Number->Name = L"Number";
-			this->Number->ReadOnly = true;
-			// 
-			// Time
-			// 
-			this->Time->HeaderText = L"Время, у";
-			this->Time->Name = L"Time";
-			this->Time->ReadOnly = true;
-			// 
-			// SizeMassiv
-			// 
-			this->SizeMassiv->HeaderText = L"Размер массива, x";
-			this->SizeMassiv->Name = L"SizeMassiv";
-			this->SizeMassiv->ReadOnly = true;
-			this->SizeMassiv->Width = 75;
-			// 
-			// x_x
-			// 
-			this->x_x->HeaderText = L"x*x";
-			this->x_x->Name = L"x_x";
-			this->x_x->ReadOnly = true;
-			// 
-			// x_y
-			// 
-			this->x_y->HeaderText = L"x*y";
-			this->x_y->Name = L"x_y";
-			this->x_y->ReadOnly = true;
-			this->x_y->Width = 70;
-			// 
-			// y_y
-			// 
-			this->y_y->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->y_y->HeaderText = L"y*y";
-			this->y_y->Name = L"y_y";
-			this->y_y->ReadOnly = true;
 			// 
 			// CHy_N
 			// 
@@ -802,6 +768,47 @@ namespace CourseworkAaSDrepos {
 			this->pictureBox10->TabIndex = 46;
 			this->pictureBox10->TabStop = false;
 			// 
+			// Number
+			// 
+			this->Number->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->Number->HeaderText = L"Номер";
+			this->Number->Name = L"Number";
+			this->Number->ReadOnly = true;
+			this->Number->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// Time
+			// 
+			this->Time->HeaderText = L"Время, у";
+			this->Time->Name = L"Time";
+			this->Time->ReadOnly = true;
+			// 
+			// SizeMassiv
+			// 
+			this->SizeMassiv->HeaderText = L"Размер массива, x";
+			this->SizeMassiv->Name = L"SizeMassiv";
+			this->SizeMassiv->ReadOnly = true;
+			this->SizeMassiv->Width = 75;
+			// 
+			// x_x
+			// 
+			this->x_x->HeaderText = L"x*x";
+			this->x_x->Name = L"x_x";
+			this->x_x->ReadOnly = true;
+			// 
+			// x_y
+			// 
+			this->x_y->HeaderText = L"x*y";
+			this->x_y->Name = L"x_y";
+			this->x_y->ReadOnly = true;
+			this->x_y->Width = 70;
+			// 
+			// y_y
+			// 
+			this->y_y->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->y_y->HeaderText = L"y*y";
+			this->y_y->Name = L"y_y";
+			this->y_y->ReadOnly = true;
+			// 
 			// EqForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1092,9 +1099,10 @@ private: System::Void buttonClear_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs^ e) {
 
-
-
+	chart1->Series["Series1"]->Points->Clear();
+	chart1->Series["Series3"]->Points->Clear();
 	const int size = Convert::ToInt32(this->sample_size->Text);
+	const int m = size;
 	unsigned int *t = new unsigned int[size];
 	int *N = new int[size];
 	init_rand();
@@ -1113,6 +1121,8 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 		TimSort(Massiv, N[i]);
 		t2 = clock();
 		t[i] = t2 - t1;
+		chart1->Series["Series3"]->Points->AddXY(N[i], t[i]);
+		
 		delete[] Massiv;
 	
 	}
@@ -1163,7 +1173,11 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 	coef_elsat = (a_1 * avg_x) / avg_y;*/
 
 	
-
+	for (int x=9000; x<= 50000; x+=1000)
+	{
+		double y = a_0 + a_1 * x;
+		chart1->Series["Series1"]->Points->AddXY(x, y);
+	}
 	
 
 
