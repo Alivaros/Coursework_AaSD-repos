@@ -1,17 +1,12 @@
 ﻿  EqForm.cpp
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,51): warning C4101: s_y: неиспользованная локальная переменная
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,46): warning C4101: s_x: неиспользованная локальная переменная
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,9): warning C4101: avg_x: неиспользованная локальная переменная
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,16): warning C4101: avg_y: неиспользованная локальная переменная
+C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\EqForm.h(1215,93): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+  (компиляция исходного файла "EqForm.cpp")
+  
   MainForm.cpp
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,51): warning C4101: s_y: неиспользованная локальная переменная
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,46): warning C4101: s_x: неиспользованная локальная переменная
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,9): warning C4101: avg_x: неиспользованная локальная переменная
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1156,16): warning C4101: avg_y: неиспользованная локальная переменная
+C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\EqForm.h(1215,93): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+  (компиляция исходного файла "MainForm.cpp")
+  
+  SortForm.cpp
   Создание кода...
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1196,1): warning C4700: использована неинициализированная локальная переменная "coef_beta"
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1197,1): warning C4700: использована неинициализированная локальная переменная "coef_elsat"
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1196,1): warning C4700: использована неинициализированная локальная переменная "coef_beta"
-C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\EqForm.h(1197,1): warning C4700: использована неинициализированная локальная переменная "coef_elsat"
   EqForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
-  Coursework_AaSD-repos.vcxproj -> C:\Users\kiril\OneDrive\Документы\GitHub\Coursework_AaSD-repos\x64\Debug\Coursework_AaSD-repos.exe
+  Coursework_AaSD-repos.vcxproj -> C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\x64\Debug\Coursework_AaSD-repos.exe

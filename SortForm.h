@@ -72,8 +72,8 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::GroupBox^ groupBox4;
 	private: System::Windows::Forms::Button^ buttonSort;
 	private: System::Windows::Forms::Button^ buttonClear;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberSource;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementSource;
+
+
 	private: System::Windows::Forms::DataGridView^ dataGridViewSorted;
 
 
@@ -81,8 +81,12 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberSource;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementSource;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ NumberSorted;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ ElementSorted;
+
+
 
 
 
@@ -125,8 +129,6 @@ namespace CourseworkAaSDrepos {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->dataGridViewSource = (gcnew System::Windows::Forms::DataGridView());
-			this->NumberSource = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->ElementSource = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->textBoxPermutation = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxCompare = (gcnew System::Windows::Forms::TextBox());
@@ -138,11 +140,13 @@ namespace CourseworkAaSDrepos {
 			this->buttonSort = (gcnew System::Windows::Forms::Button());
 			this->buttonClear = (gcnew System::Windows::Forms::Button());
 			this->dataGridViewSorted = (gcnew System::Windows::Forms::DataGridView());
-			this->NumberSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->ElementSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->NumberSource = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ElementSource = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->NumberSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ElementSorted = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -398,20 +402,6 @@ namespace CourseworkAaSDrepos {
 			this->dataGridViewSource->TabIndex = 6;
 			this->dataGridViewSource->TabStop = false;
 			// 
-			// NumberSource
-			// 
-			this->NumberSource->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->NumberSource->HeaderText = L"Номер";
-			this->NumberSource->Name = L"NumberSource";
-			this->NumberSource->ReadOnly = true;
-			// 
-			// ElementSource
-			// 
-			this->ElementSource->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->ElementSource->HeaderText = L"Элемент";
-			this->ElementSource->Name = L"ElementSource";
-			this->ElementSource->ReadOnly = true;
-			// 
 			// groupBox3
 			// 
 			this->groupBox3->BackColor = System::Drawing::SystemColors::Control;
@@ -557,20 +547,6 @@ namespace CourseworkAaSDrepos {
 			this->dataGridViewSorted->TabIndex = 10;
 			this->dataGridViewSorted->TabStop = false;
 			// 
-			// NumberSorted
-			// 
-			this->NumberSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->NumberSorted->HeaderText = L"Номер";
-			this->NumberSorted->Name = L"NumberSorted";
-			this->NumberSorted->ReadOnly = true;
-			// 
-			// ElementSorted
-			// 
-			this->ElementSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
-			this->ElementSorted->HeaderText = L"Элемент";
-			this->ElementSorted->Name = L"ElementSorted";
-			this->ElementSorted->ReadOnly = true;
-			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
@@ -603,6 +579,38 @@ namespace CourseworkAaSDrepos {
 			this->pictureBox3->Size = System::Drawing::Size(460, 333);
 			this->pictureBox3->TabIndex = 13;
 			this->pictureBox3->TabStop = false;
+			// 
+			// NumberSource
+			// 
+			this->NumberSource->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->NumberSource->HeaderText = L"Номер";
+			this->NumberSource->Name = L"NumberSource";
+			this->NumberSource->ReadOnly = true;
+			this->NumberSource->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// ElementSource
+			// 
+			this->ElementSource->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->ElementSource->HeaderText = L"Элемент";
+			this->ElementSource->Name = L"ElementSource";
+			this->ElementSource->ReadOnly = true;
+			this->ElementSource->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// NumberSorted
+			// 
+			this->NumberSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->NumberSorted->HeaderText = L"Номер";
+			this->NumberSorted->Name = L"NumberSorted";
+			this->NumberSorted->ReadOnly = true;
+			this->NumberSorted->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// ElementSorted
+			// 
+			this->ElementSorted->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::Fill;
+			this->ElementSorted->HeaderText = L"Элемент";
+			this->ElementSorted->Name = L"ElementSorted";
+			this->ElementSorted->ReadOnly = true;
+			this->ElementSorted->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// SortForm
 			// 

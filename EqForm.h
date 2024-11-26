@@ -48,7 +48,8 @@ namespace CourseworkAaSDrepos {
 
 
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart;
+
 
 
 	private: System::Windows::Forms::DataGridView^ dataGridViewSourceStaticData;
@@ -169,6 +170,24 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	protected:
 
 	protected:
@@ -197,7 +216,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->sample_size = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->chart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->dataGridViewSourceStaticData = (gcnew System::Windows::Forms::DataGridView());
 			this->CHy_N = (gcnew System::Windows::Forms::TextBox());
 			this->CHy_X_0 = (gcnew System::Windows::Forms::TextBox());
@@ -241,7 +260,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->x_x = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->x_y = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->y_y = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSourceStaticData))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
@@ -312,34 +331,37 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Точечный график и график уравнения связи";
 			// 
-			// chart1
+			// chart
 			// 
 			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
+			this->chart->ChartAreas->Add(chartArea1);
 			legend1->Enabled = false;
 			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(472, 82);
-			this->chart1->Name = L"chart1";
+			this->chart->Legends->Add(legend1);
+			this->chart->Location = System::Drawing::Point(472, 82);
+			this->chart->Name = L"chart";
 			series1->ChartArea = L"ChartArea1";
 			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series1->Color = System::Drawing::Color::Orange;
 			series1->Legend = L"Legend1";
 			series1->Name = L"Series1";
 			series1->YValuesPerPoint = 6;
 			series2->ChartArea = L"ChartArea1";
 			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Point;
+			series2->Color = System::Drawing::Color::Red;
 			series2->Legend = L"Legend1";
 			series2->Name = L"Series2";
 			series3->ChartArea = L"ChartArea1";
 			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series3->Color = System::Drawing::Color::Blue;
 			series3->Legend = L"Legend1";
 			series3->Name = L"Series3";
-			this->chart1->Series->Add(series1);
-			this->chart1->Series->Add(series2);
-			this->chart1->Series->Add(series3);
-			this->chart1->Size = System::Drawing::Size(300, 300);
-			this->chart1->TabIndex = 5;
-			this->chart1->Text = L"chart1";
+			this->chart->Series->Add(series1);
+			this->chart->Series->Add(series2);
+			this->chart->Series->Add(series3);
+			this->chart->Size = System::Drawing::Size(300, 300);
+			this->chart->TabIndex = 5;
+			this->chart->Text = L"chart1";
 			// 
 			// dataGridViewSourceStaticData
 			// 
@@ -781,12 +803,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->Time->HeaderText = L"Время, у";
 			this->Time->Name = L"Time";
 			this->Time->ReadOnly = true;
+			this->Time->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// SizeMassiv
 			// 
 			this->SizeMassiv->HeaderText = L"Размер массива, x";
 			this->SizeMassiv->Name = L"SizeMassiv";
 			this->SizeMassiv->ReadOnly = true;
+			this->SizeMassiv->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->SizeMassiv->Width = 75;
 			// 
 			// x_x
@@ -794,12 +818,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->x_x->HeaderText = L"x*x";
 			this->x_x->Name = L"x_x";
 			this->x_x->ReadOnly = true;
+			this->x_x->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// x_y
 			// 
 			this->x_y->HeaderText = L"x*y";
 			this->x_y->Name = L"x_y";
 			this->x_y->ReadOnly = true;
+			this->x_y->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->x_y->Width = 70;
 			// 
 			// y_y
@@ -808,6 +834,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->y_y->HeaderText = L"y*y";
 			this->y_y->Name = L"y_y";
 			this->y_y->ReadOnly = true;
+			this->y_y->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// EqForm
 			// 
@@ -836,7 +863,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->label5);
-			this->Controls->Add(this->chart1);
+			this->Controls->Add(this->chart);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->sample_size);
 			this->Controls->Add(this->label2);
@@ -854,7 +881,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"Уравнение связи";
 			this->Load += gcnew System::EventHandler(this, &EqForm::EqForm_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSourceStaticData))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -880,7 +907,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 		Regex^ regex = gcnew Regex("^[0-9]*$");
 		this->buttonCalc->Enabled =
 			regex->IsMatch(this->sample_size->Text) &&
-			this->sample_size->Text != "1";
+			this->sample_size->Text != "1" &&
+			this->sample_size->Text != " " &&
+			this->sample_size->Text != "";
 	}
 		
 
@@ -1074,6 +1103,9 @@ MHKm:
 }
 private: System::Void buttonClear_Click(System::Object^ sender, System::EventArgs^ e) 
 {
+	chart->Series["Series1"]->Points->Clear();
+	chart->Series["Series2"]->Points->Clear();
+	chart->Series["Series3"]->Points->Clear();
 	this->dataGridViewSourceStaticData->Rows->Clear();
 	sample_size->Clear();
 	CHy_N->Clear();
@@ -1090,7 +1122,7 @@ private: System::Void buttonClear_Click(System::Object^ sender, System::EventArg
 	Coefficient_elsatic->Clear();
 	Coefficient_determination->Clear();
 	Coefficient_beta->Clear();
-	
+	buttonCalc->Enabled = false;
 	
 
 
@@ -1099,10 +1131,11 @@ private: System::Void buttonClear_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	chart1->Series["Series1"]->Points->Clear();
-	chart1->Series["Series3"]->Points->Clear();
+	chart->Series["Series1"]->Points->Clear();
+	chart->Series["Series2"]->Points->Clear();
+	chart->Series["Series3"]->Points->Clear();
 	const int size = Convert::ToInt32(this->sample_size->Text);
-	const int m = size;
+	const int n = size;
 	unsigned int *t = new unsigned int[size];
 	int *N = new int[size];
 	init_rand();
@@ -1121,64 +1154,94 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 		TimSort(Massiv, N[i]);
 		t2 = clock();
 		t[i] = t2 - t1;
-		chart1->Series["Series3"]->Points->AddXY(N[i], t[i]);
+		chart->Series["Series2"]->Points->AddXY(N[i], t[i]);
 		
 		delete[] Massiv;
 	
 	}
 	fillDataGridView(size, t, N);
 
-	
-
 	double sumy = 0, sumx = 0, sumx_x = 0, sumx_y = 0, sumy_y = 0;
-
+	double avg_x, avg_y, coef_elsat, coef_beta, s_x, s_y;
+	double delta = 0, delta_a0 = 0, delta_a1 = 0;
 	for (int i = 0; i < this->dataGridViewSourceStaticData->Rows->Count; i++) {
 		if (!this->dataGridViewSourceStaticData->Rows[i]->IsNewRow) {
-			if (this->dataGridViewSourceStaticData->Columns->Count > this->Time->Index && this->dataGridViewSourceStaticData->Rows[i]->Cells[this->Time->Index]->Value != nullptr) {
+			if (this->dataGridViewSourceStaticData->Columns->Count > this->Time->Index && 
+				this->dataGridViewSourceStaticData->Rows[i]->Cells[this->Time->Index]->Value != nullptr) {
 				sumy += Convert::ToDouble(this->dataGridViewSourceStaticData->Rows[i]->Cells[this->Time->Index]->Value);
 			}
-			if (this->dataGridViewSourceStaticData->Columns->Count > this->SizeMassiv->Index && this->dataGridViewSourceStaticData->Rows[i]->Cells[this->SizeMassiv->Index]->Value != nullptr) {
+			if (this->dataGridViewSourceStaticData->Columns->Count > this->SizeMassiv->Index && 
+				this->dataGridViewSourceStaticData->Rows[i]->Cells[this->SizeMassiv->Index]->Value != nullptr) {
 				sumx += Convert::ToDouble(this->dataGridViewSourceStaticData->Rows[i]->Cells[this->SizeMassiv->Index]->Value);
 			}
-			if (this->dataGridViewSourceStaticData->Columns->Count > this->x_x->Index && this->dataGridViewSourceStaticData->Rows[i]->Cells[this->x_x->Index]->Value != nullptr) {
+			if (this->dataGridViewSourceStaticData->Columns->Count > this->x_x->Index && 
+				this->dataGridViewSourceStaticData->Rows[i]->Cells[this->x_x->Index]->Value != nullptr) {
 				sumx_x += Convert::ToDouble(this->dataGridViewSourceStaticData->Rows[i]->Cells[this->x_x->Index]->Value);
 			}
-			if (this->dataGridViewSourceStaticData->Columns->Count > this->x_y->Index && this->dataGridViewSourceStaticData->Rows[i]->Cells[this->x_y->Index]->Value != nullptr) {
+			if (this->dataGridViewSourceStaticData->Columns->Count > this->x_y->Index && 
+				this->dataGridViewSourceStaticData->Rows[i]->Cells[this->x_y->Index]->Value != nullptr) {
 				sumx_y += Convert::ToDouble(this->dataGridViewSourceStaticData->Rows[i]->Cells[this->x_y->Index]->Value);
 			}
-			if (this->dataGridViewSourceStaticData->Columns->Count > this->y_y->Index && this->dataGridViewSourceStaticData->Rows[i]->Cells[this->y_y->Index]->Value != nullptr) {
+			if (this->dataGridViewSourceStaticData->Columns->Count > this->y_y->Index && 
+				this->dataGridViewSourceStaticData->Rows[i]->Cells[this->y_y->Index]->Value != nullptr) {
 				sumy_y += Convert::ToDouble(this->dataGridViewSourceStaticData->Rows[i]->Cells[this->y_y->Index]->Value);
 			}
 		}
 	}
 	
 	
-	double avg_x, avg_y, coef_elsat, coef_beta, s_x, s_y;
-	/*delta = (size * sumx_x) - (sumx * sumx);
-	delta_a0 = (sumy * sumx_x) - (sumx_y * sumx);
-	delta_a1 = (size * sumx_y) - (sumx * sumx_x);*/
-	double delta = 0, delta_a0 = 0, delta_a1 = 0;
-	delta = (size * sumx_x) - (sumx * sumx);
+
+	delta = (n * sumx_x) - (sumx * sumx);
 	delta_a0 = (sumy * sumx_x) - (sumx * sumx_y);
-	delta_a1 = (size * sumx_y) - (sumy * sumx);
+	delta_a1 = (n * sumx_y) - (sumy * sumx);
+
 	double a_0 = delta_a0 / delta;
 	double a_1 = delta_a1 / delta;
-	double ryx = ((size * sumx_y) - (sumx * sumy)) / (sqrt(size * sumx_x - (pow(sumx, 2))) * sqrt(size * sumy_y - (pow(sumy, 2))));
+	double ryx = ((n * sumx_y) - (sumx * sumy)) / (sqrt(n * sumx_x - (pow(sumx, 2))) * sqrt(n * sumy_y - (pow(sumy, 2))));
 	double ryx_2 = pow(ryx, 2);
-	/*avg_x = sumx / size;
-	avg_y = sumy / size;
-	s_x = sqrt(pow((sumx - avg_x), 2) / size);
-	s_y = sqrt(pow((sumy - avg_y), 2) / size);
-	coef_beta = (a_1 * s_x) / s_y;
-	coef_elsat = (a_1 * avg_x) / avg_y;*/
+	
+	avg_x = sumx / n;
+	avg_y = sumy / n;
 
 	
+	double sumx_deviation = 0, sumy_deviation = 0;
+	for (int i = 0; i < this->dataGridViewSourceStaticData->Rows->Count; i++)
+	{
+		if (!this->dataGridViewSourceStaticData->Rows[i]->IsNewRow)
+		{
+			if (this->dataGridViewSourceStaticData->Columns->Count > this->SizeMassiv->Index &&
+				this->dataGridViewSourceStaticData->Rows[i]->Cells[this->SizeMassiv->Index]->Value != nullptr &&
+				this->dataGridViewSourceStaticData->Columns->Count > this->Time->Index &&
+				this->dataGridViewSourceStaticData->Rows[i]->Cells[this->Time->Index]->Value != nullptr);
+		}
+		double x_i = Convert::ToDouble(this->dataGridViewSourceStaticData->Rows[i]->Cells[SizeMassiv->Index]->Value);
+		double y_i = Convert::ToDouble(this->dataGridViewSourceStaticData->Rows[i]->Cells[Time->Index]->Value);
+		
+		sumx_deviation += pow(x_i - avg_x, 2);
+		sumy_deviation += pow(y_i - avg_y, 2);
+
+	}
+
+	s_x = sqrt(sumx_deviation/n);
+	s_y = sqrt(sumy_deviation/n);
+
+	coef_elsat = (a_1 * avg_x) / avg_y;
+	coef_beta = (a_1 * s_x) / s_y;
+
+
+
+
 	for (int x=9000; x<= 50000; x+=1000)
 	{
 		double y = a_0 + a_1 * x;
-		chart1->Series["Series1"]->Points->AddXY(x, y);
+		chart->Series["Series1"]->Points->AddXY(x, y);
 	}
-	
+	for (int i = 0; i < size; i++)
+	{
+		double y_point = a_0 + a_1 * N[i];
+
+		chart->Series["Series3"]->Points->AddXY(N[i], y_point);
+	}
 
 
 	CHy_N->Text = Convert::ToString(size);
@@ -1215,8 +1278,8 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 	Console::WriteLine("a_0: " + a_0);
 	Console::WriteLine("a_1: " + a_1);
 	Console::WriteLine("Коэф корреляции " + ryx);
-	Console::WriteLine("Коэф б" + coef_beta);
-	Console::WriteLine("Коэф э" + coef_elsat);
+	Console::WriteLine("Коэф б " + coef_beta);
+	Console::WriteLine("Коэф э " + coef_elsat);
 
 
 
