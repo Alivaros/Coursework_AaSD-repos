@@ -239,7 +239,7 @@ namespace CourseworkAaSDrepos {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Times New Roman", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label7->Location = System::Drawing::Point(324, 427);
+			this->label7->Location = System::Drawing::Point(323, 425);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(136, 23);
 			this->label7->TabIndex = 14;

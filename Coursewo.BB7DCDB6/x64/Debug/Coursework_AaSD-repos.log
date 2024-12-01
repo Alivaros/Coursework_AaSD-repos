@@ -1,9 +1,5 @@
-﻿  EqForm.cpp
-C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\EqForm.h(1215,93): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
-  (компиляция исходного файла "EqForm.cpp")
-  
-  MainForm.cpp
-C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\EqForm.h(1215,93): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+﻿  MainForm.cpp
+C:\Users\kiril\source\repos\Alivaros\Coursework_AaSD-repos\EqForm.h(1221,93): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
   (компиляция исходного файла "MainForm.cpp")
   
   SortForm.cpp

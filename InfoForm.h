@@ -56,6 +56,7 @@ namespace CourseworkAaSDrepos {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(InfoForm::typeid));
 			this->buttonExit = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -93,11 +94,13 @@ namespace CourseworkAaSDrepos {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(30, 81);
+			this->label2->Location = System::Drawing::Point(30, 80);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(608, 24);
+			this->label2->Size = System::Drawing::Size(679, 192);
 			this->label2->TabIndex = 2;
-			this->label2->Text = L"Курсовая работа по дисциплине \"Алгоритмы и структуры данных\"";
+			this->label2->Text = resources->GetString(L"label2.Text");
+			this->label2->TextAlign = System::Drawing::ContentAlignment::BottomLeft;
+			this->label2->Click += gcnew System::EventHandler(this, &InfoForm::label2_Click);
 			// 
 			// label3
 			// 
@@ -156,5 +159,7 @@ namespace CourseworkAaSDrepos {
 	{
 		System::Diagnostics::Process::Start("https://github.com/Alivaros/Coursework_AaSD-repos");
 	}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

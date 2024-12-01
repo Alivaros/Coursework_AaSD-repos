@@ -908,6 +908,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 		this->buttonCalc->Enabled =
 			regex->IsMatch(this->sample_size->Text) &&
 			this->sample_size->Text != "1" &&
+			this->sample_size->Text != "0" &&
 			this->sample_size->Text != " " &&
 			this->sample_size->Text != "";
 	}
@@ -981,7 +982,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 		while (i < len1 && j < len2)
 		{
 		
-			if (left[i] <= right[j]) {
+			if (left[i] <= right[j]) 
+			{
 				arr[k] = left[i];
 				i++;
 			}
@@ -995,7 +997,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 
 		// Копируем ост элементы
 		// из левого массива, если есть
-		while (i < len1) {
+		while (i < len1) 
+		{
 			arr[k] = left[i];
 			k++;
 			i++;
@@ -1004,7 +1007,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 
 		// Копируем ост элементы
 		// из правого массива, если есть
-		while (j < len2) {
+		while (j < len2) 
+		{
 			arr[k] = right[j];
 			k++;
 			j++;
@@ -1024,8 +1028,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 		// Начинаем слияние с размера RUN 
 		// Сливаем до 
 		// формирования размера 64, затем 128, 256 
-		// м так далее .... 
-		for (int size = RUN; size < n; size = 2 * size) {
+		// так далее .... 
+		for (int size = RUN; size < n; size = 2 * size) 
+		{
 
 			// выбираем начальную точку
 			// левого подмассива. Мы собираемся
@@ -1034,7 +1039,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ y_y;
 			// и arr[left+size, left+2*size-1] 
 			// После каждого слияния мы
 			// увеличиваем left на 2*size 
-			for (int left = 0; left < n; left += 2 * size) {
+			for (int left = 0; left < n; left += 2 * size) 
+			{
 
 				// Находим конечную точку
 				// левого подмассива 
