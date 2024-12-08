@@ -68,6 +68,7 @@ namespace CourseworkAaSDrepos {
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Button^ buttonInfo;
+	private: System::Windows::Forms::HelpProvider^ helpProvider;
 
 	private:
 		/// <summary>
@@ -96,6 +97,7 @@ namespace CourseworkAaSDrepos {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->buttonInfo = (gcnew System::Windows::Forms::Button());
+			this->helpProvider = (gcnew System::Windows::Forms::HelpProvider());
 			this->SuspendLayout();
 			// 
 			// buttonSort
@@ -258,6 +260,10 @@ namespace CourseworkAaSDrepos {
 			this->buttonInfo->UseVisualStyleBackColor = true;
 			this->buttonInfo->Click += gcnew System::EventHandler(this, &MainForm::buttonInfo_Click);
 			// 
+			// helpProvider
+			// 
+			this->helpProvider->HelpNamespace = L"C:\\Users\\kiril\\source\\repos\\Alivaros\\Coursework_AaSD-repos\\Coursework_help.chm";
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -284,6 +290,7 @@ namespace CourseworkAaSDrepos {
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Курсовая работа";
+			this->HelpButtonClicked += gcnew System::ComponentModel::CancelEventHandler(this, &MainForm::MainForm_HelpButtonClicked);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -339,6 +346,10 @@ Infom:
 private: System::Void buttonExit_Click(System::Object^ sender, System::EventArgs^ e) 
 {
 	this->Close();
+}
+private: System::Void MainForm_HelpButtonClicked(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) 
+{
+	Help::ShowHelp(this, "Coursework_help.chm");
 }
 };
 }

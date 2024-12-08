@@ -1267,33 +1267,6 @@ private: System::Void buttonCalc_Click(System::Object^ sender, System::EventArgs
 
 
 
-
-
-
-
-
-
-
-	Console::WriteLine("Сумма Time: " + sumy);
-	Console::WriteLine("Сумма SizeMassiv: " + sumx);
-	Console::WriteLine("Сумма x_x: " + sumx_x);
-	Console::WriteLine("Сумма x_y: " + sumx_y);
-	Console::WriteLine("delta: " + delta);
-	Console::WriteLine("delta_0: " + delta_a0);
-	Console::WriteLine("delta_1: " + delta_a1);
-	Console::WriteLine("a_0: " + a_0);
-	Console::WriteLine("a_1: " + a_1);
-	Console::WriteLine("Коэф корреляции " + ryx);
-	Console::WriteLine("Коэф б " + coef_beta);
-	Console::WriteLine("Коэф э " + coef_elsat);
-
-
-
-
-
-
-
-
 	delete[] t;
 	delete[] N;
 	

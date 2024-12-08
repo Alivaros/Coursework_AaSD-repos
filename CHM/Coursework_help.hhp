@@ -1,0 +1,23 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Coursework_help.chm
+Contents file=Table of Contents.hhc
+Default topic=index.htm
+Display compile progress=No
+Language=0x419 Русский (Россия)
+Title=Справка
+
+
+[FILES]
+index.htm
+specifications.htm
+Help\tab1\input_data.htm
+Help\tab1\output_data.htm
+Help\tab2\input_data.htm
+Help\tab2\output_data.htm
+
+[MAP]
+#include help.h
+
+[INFOTYPES]
+

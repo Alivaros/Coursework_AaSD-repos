@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Atilde;&euml;&agrave;&acirc;&iacute;&agrave;&yuml;">
+		<param name="Local" value="index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Ntilde;&icirc;&eth;&ograve;&egrave;&eth;&icirc;&acirc;&ecirc;&agrave; &igrave;&aring;&ograve;&icirc;&auml;&icirc;&igrave; Timsort">
+		<param name="Local" value="Help\tab1\input_data.htm">
+		<param name="URL" value="Help\tab1\output_data.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Acirc;&acirc;&icirc;&auml; &auml;&agrave;&iacute;&iacute;&ucirc;&otilde;">
+			<param name="Local" value="Help\tab1\input_data.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Acirc;&ucirc;&acirc;&icirc;&auml; &auml;&agrave;&iacute;&iacute;&ucirc;&otilde;">
+			<param name="Local" value="Help\tab1\output_data.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Oacute;&eth;&agrave;&acirc;&iacute;&aring;&iacute;&egrave;&aring; &ntilde;&acirc;&yuml;&ccedil;&egrave;">
+		<param name="Local" value="Help\tab2\input_data.htm">
+		<param name="Local" value="Help\tab2\output_data.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Acirc;&acirc;&icirc;&auml; &auml;&agrave;&iacute;&iacute;&ucirc;&otilde;">
+			<param name="Local" value="Help\tab2\input_data.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Acirc;&ucirc;&acirc;&icirc;&auml; &auml;&agrave;&iacute;&iacute;&ucirc;&otilde;">
+			<param name="Local" value="Help\tab2\output_data.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Ograve;&aring;&otilde;&iacute;&egrave;&divide;&aring;&ntilde;&ecirc;&icirc;&aring; &ccedil;&agrave;&auml;&agrave;&iacute;&egrave;&aring;">
+		<param name="Local" value="specifications.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>
